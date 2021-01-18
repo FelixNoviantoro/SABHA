@@ -68,7 +68,7 @@ nav {
     background: transparent;
     transition: 1s;
 }
-.form-outer {
+form {
     width: 450px;
     height: 400px;
     display: flex;
@@ -80,7 +80,7 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-form {
+.form-inner {
     width: 450px;
     display: flex;
     flex-direction: column;
@@ -156,19 +156,7 @@ form {
     background: white;
     color: black;
 }
-/* .fade {
-    animation: fade 2s ease-in-out;
+#submit {
+    background: black;
+    color: white;
 }
-
-
-@keyframes fade {
-    from {
-        background-image: url('./img/joseph-barrientos-eUMEWE-7Ewg-unsplash.jpg');
-        opacity: 0;
-    }
-    to {
-        background-image: url('./img/simon-migaj-Yui5vfKHuzs-unsplash.jpg');
-        opacity: 1;
-    }
-} */
-
