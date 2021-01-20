@@ -13,17 +13,7 @@ const answer = document.querySelectorAll('.answer')
 const nextButton = document.querySelector('.next-button')
 
 const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: false})
-
-        // tl.to('.prolog-1', {y:"0%", opacity:"1",ease: "power4.out" ,onComplete : () => {
-        //     tl.paused(true)}})
-        // tl.to('.image-teteh-1', {y:"0%", opacity:"1",ease: "power4.out", onComplete : () => {
-        //     tl.paused(true)
-        // }}, "-=2")
-        // tl.to('.prolog-1', {y:"0%", opacity:"1",ease: "power4.out" ,onComplete : () => {
-        //     tl.paused(true)}})
-        // tl.to('.prolog-2', {y:"0%", opacity:"1",ease: "power4.out" ,onComplete : () => {
-        //     tl.paused(true)}})
-        
+       
         tl.to('.hide-1', {y:"0%", opacity:"1", stagger : 0.3}, "+=1");
         tl.to('.image-teteh-1', {y:"0%", opacity:"1",ease: "power4.out", onComplete : () => {
             tl.paused(true)
@@ -55,17 +45,12 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
         tl.to('.container', {y:"-100%"})
         tl.to('.nav-title', {y:"0%", stagger : 0.5}, "+=1")
         tl.to('nav', {y:"-40%", x:"-40%"}, "+=1")
+        tl.to('.nav-outer', {scale: 0.5}, "-=1")
         tl.to('form', {opacity:"1"})
-
-
-        
-
 
     nextButton.addEventListener('click', function(){
         tl.paused(false)
     })
-
-// nextButton.addEventListener('click')
 
 next1.addEventListener('click', () => {
     form1.style.right = '450px'
