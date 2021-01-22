@@ -12,12 +12,33 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'lato';
+    cursor: none;
 }
 
 body {
     display: flex;
     flex-direction: column;
     overflow:hidden;
+}
+.cursor, .follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    background: white;
+}
+.follower {
+    width: 60px;
+    height: 60px;
+    background: black;
+    border: 2px solid white;
+    opacity: .8;
 }
 
 /* PROLOG ================================================= */
@@ -69,10 +90,14 @@ body {
     padding-bottom: 20px;
     font-family: 'lato-bold';
 }
+.outer-3 {
+    text-align: center;
+}
 .hide-1 , .hide-2, .hide-3{
     display: inline-block;
     transform: translateY(100%);
     opacity: 0;
+    font-weight: 900;
 }
 .next-button {
     margin-top: 100px;
@@ -81,21 +106,29 @@ body {
     left: 50%;
     transform: translate(-50%, 0%);
     transition: .3s;
-    cursor: pointer;
+    opacity: .5;
+    background: white;  
+    width : 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
 }
 .next-button:hover {
-    transform: scale(1.1) translate(-50%, 0%)
+    transform: scale(1.2) translateX(-48%);
 }
 .image-prolog {
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 .image-teteh-1, .image-teteh-2{
-    width: 75%;
+    width: 150%;
     position: absolute;
-    margin-top: 5%;
     opacity: 1;
-    top: 0;
+    bottom: 0;
     right: 0;
     opacity: 0;
 }
@@ -108,7 +141,7 @@ body {
 }
 .image-teteh-3 {
     opacity: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -188,7 +221,7 @@ form {
     position: absolute;
     transition: .5s;
 }
-#form2, #form3 {
+#form2, #form3, #form4 {
     left: 450px;
 }
 
@@ -204,7 +237,6 @@ form {
     height: 30px;
     color: white;
     margin: 20px;
-    cursor: pointer;
     transition: .3s;
     border-radius: 5px;
 }
@@ -220,7 +252,6 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 .next, .back {
     margin: 20px;
@@ -237,7 +268,6 @@ form {
 }
 .next {
     background: white;
-
 }
 .next:hover {
     opacity: 1;
@@ -251,4 +281,47 @@ form {
     background: white;
     color: black;
     opacity: 1;
+}
+
+@media screen and (max-width : 670px){
+    .prolog-outer {
+        padding-left: 5%;
+    }
+    .prolog-1, .prolog-2, .prolog-3 {
+        width: 90%;
+    }
+    .prolog-3 {
+        left: 10%;
+    }
+
+    .hide-outer, .hide-title {
+        text-align: center;
+    }
+    .hide-outer {
+        font-size: 20px;
+    }
+    .hide-title {
+        font-size: 45px;
+    }
+
+    .image-teteh-1, .image-teteh-2 {
+        position: fixed;
+        bottom: 0;
+        right: 15%;
+        opacity: 0;
+        object-fit: cover;
+        width: auto;
+    }
+    .image-teteh-2 {
+        width: 175%;
+    }
+    .image-teteh-3 {
+        height: 100%;
+    }
+    .next-button {
+        transform: translateY(50px);
+    }
+    .next-button:hover {
+        transform: scale(1.1) translate(0%, 50px );
+    }
 }
