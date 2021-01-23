@@ -29,7 +29,7 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
 
         tl.to('.hide-1', {y:"0%", opacity:"1", stagger : 0.3}, "+=1");
         tl.from('.next-button', {opacity : "0"});
-        if(window.innerWidth <= 670) {
+        if(window.innerWidth <= 900) {
             tl.to('.image-teteh-1', {y:"0%", opacity:"0.4",ease: "power4.out", onComplete : () => {
                 tl.paused(true)
             }}, "-=1");
@@ -48,7 +48,7 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
             tl.paused(true)
         }});
         tl.to('.prolog', {background :'black', color: 'white'}, "-=2.5")
-        if(window.innerWidth <= 670) {
+        if(window.innerWidth <= 900) {
             tl.to('.image-teteh-2', {y:"0%", opacity:"0.4",ease: "power4.out"}, "-=1");
         } else {
             tl.to('.image-teteh-2', {y:"0%", opacity:"1",ease: "power4.out"}, "-=1");
