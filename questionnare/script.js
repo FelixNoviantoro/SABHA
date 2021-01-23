@@ -1,6 +1,7 @@
 const form1 = document.getElementById('form1')
 const form2 = document.getElementById('form2')
 const form3 = document.getElementById('form3')
+const formInner = document.querySelectorAll('.form-inner')
 
 const next1 = document.getElementById('next1')
 const next2 = document.getElementById('next2')
@@ -11,6 +12,7 @@ const yes = document.querySelector('.answer-yes')
 const no = document.querySelector('.answer-no')
 const answer = document.querySelectorAll('.answer')
 const nextButton = document.querySelector('.next-button')
+const submitBtn = document.getElementById('submit')
 
 const cur = document.querySelector('.cursor')
 const follow = document.querySelector('.follower')
@@ -80,6 +82,14 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
 
     nextButton.addEventListener('click', function(){
         tl.paused(false)
+    })
+
+    submitBtn.addEventListener('click', () => {
+        tl.to('.modal-bg', {visibility : 'visible'})
+        tl.to('.form-outer', {'-webkit-filter':'blur(2px)', filter: 'blur(2px)'}, "-=1")
+        tl.from('.modal', {height : "0%"})
+        tl.from('.modal', {width : "50%"})
+        tl.from('.modal-inner',{scale: 1.5}, "-=1")
     })
 
 next1.addEventListener('click', () => {

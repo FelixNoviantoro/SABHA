@@ -28,14 +28,14 @@ body {
     pointer-events: none;
 }
 .cursor {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border: 1px solid black;
     background: white;
 }
 .follower {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     background: black;
     border: 2px solid white;
     opacity: .8;
@@ -76,6 +76,7 @@ body {
     opacity: 1;
     z-index: 1;
     color: white;
+    top: 10%;
 }
 .hide-outer {
     width: 100%;
@@ -108,8 +109,8 @@ body {
     transition: .3s;
     opacity: .5;
     background: white;  
-    width : 100px;
-    height: 100px;
+    width : 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -118,6 +119,9 @@ body {
 }
 .next-button:hover {
     transform: scale(1.2) translateX(-48%);
+}
+.next-button img {
+    transform: scale(.5);
 }
 .image-prolog {
     width: 100%;
@@ -224,6 +228,15 @@ form {
 #form2, #form3, #form4 {
     left: 450px;
 }
+.label {
+    font-size: smaller;
+}
+.fill {
+    height: 40px;
+    font-size: 25px;
+    opacity: .5;
+    padding-bottom: 20px;
+}
 
 .question {
     padding-bottom: 20px;
@@ -281,6 +294,31 @@ form {
     background: white;
     color: black;
     opacity: 1;
+}
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 1;
+}
+
+.modal {
+    width: 30%;
+    height: 30%;
+    background: rgb(185, 185, 185);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
 }
 
 @media screen and (max-width : 670px){
