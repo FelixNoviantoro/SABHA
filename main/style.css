@@ -121,34 +121,28 @@ main {
     margin-top: 150px;
 }
 .main-image {
-    height: 500px;
+    height: 400px;
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 .image-1 {
     background: url('./images/main/freestocks-_3Q3tsJ01nc-unsplash.jpg');
-    /* background-attachment: fixed; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: -40px;
 }
 .image-2 {
     background: url('./images/main/hannah-morgan-ycVFts5Ma4s-unsplash.jpg');
-    /* background-attachment: fixed; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: -80px;
-    height: 550px;
 }
 .image-3 {
     background: url('./images/main/tamara-bellis-IwVRO3TLjLc-unsplash.jpg');
-    /* background-attachment: fixed; */
+}
+.image-1 ,.image-2, .image-3{
+    position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    top: -140px;
+    background-position: center center;
+    height: 600px;
+    width: 100%;
+    transform: translateY(-200px);
 }
 main .content{
     display: flex;
@@ -188,7 +182,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    transform: translateY(-145px);
+    /* transform: translateY(-145px); */
 }
 .header-main {
     width: 50%;
@@ -363,18 +357,6 @@ footer {
     }
     main .content {
         top: 0;
-    }
-    .image-1 {
-        top: -110px;
-    }
-    .image-2 {
-        top: -200px;
-    }
-    .image-3 {
-        top: -300px;
-    }
-    header {
-        transform: translateY(-300px);
     }
     footer {
         height: 90vh;

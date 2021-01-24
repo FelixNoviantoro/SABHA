@@ -21,7 +21,7 @@ tl.from('main', {opacity:"0", y: "10%", duration: 1}, "-=1")
 tl.from("footer", {opacity:"0"})
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.utils.toArray('.main-image').forEach((e, i) => {
+gsap.utils.toArray('.main-bg').forEach((e, i) => {
         e.style.backgroundPosition = `50% 0`
         gsap.to(e, {
             scrollTrigger : {
@@ -31,7 +31,7 @@ gsap.utils.toArray('.main-image').forEach((e, i) => {
                 scrub : true
                 // markers : true
             },
-            backgroundPosition: `50% ${innerHeight/8}px`
+            backgroundPosition: `50% ${innerHeight/4}px`
         });
 }) 
             
