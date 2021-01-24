@@ -18,6 +18,7 @@ tl.from('.title-main', {opacity:0, y:"-50%"})
 tl.from('.nav-links ul li', {opacity: "0", y:"100%", stagger:.2})
 tl.from('.title-search', {opacity:"0"})
 tl.from('main', {opacity:"0", y: "10%", duration: 1}, "-=1")
+tl.from('header', {opacity:"0"}, "-=1")
 tl.from("footer", {opacity:"0"})
 
 gsap.registerPlugin(ScrollTrigger);
