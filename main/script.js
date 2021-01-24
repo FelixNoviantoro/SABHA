@@ -5,12 +5,36 @@ const bars = document.querySelector('.title-bars');
 const barImg = document.querySelector('.bars');
 const overlay = document.querySelector('.overlay');
 
-// console.log()
-window.addEventListener('scroll', ()=>{
-    let offset = window.pageYOffset;
-    images.style.backgroundPositionY = offset * .2 + "px" ;
-})
+const tl = gsap.timeline({defaults: {ease :"power4.out", duration : .5}})
+tl.from('.title-content h1', {opacity: "0", duration: 1 , delay: 1})
+tl.to('.list-content li', {y: "-10px"})
+tl.to('.list-content li', {y: "-125%"})
+tl.to('.list-content li', {y: "-220%"})
 
+tl.to('.intro', {opacity: "0", y: "-50%", duration: 1.5 })
+tl.to('.intro', {visibility: "hidden"},'-=.5')
+
+tl.from('.title-main', {opacity:0, y:"-50%"})
+tl.from('.nav-links ul li', {opacity: "0", y:"100%", stagger:.2})
+tl.from('.title-search', {opacity:"0"})
+tl.from('main', {opacity:"0", y: "10%", duration: 1}, "-=1")
+tl.from("footer", {opacity:"0"})
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('.main-image').forEach((e, i) => {
+        e.style.backgroundPosition = `50% 0`
+        gsap.to(e, {
+            scrollTrigger : {
+                trigger : e,
+                start : "top center",
+                end : "bottom center",
+                scrub : true
+                // markers : true
+            },
+            backgroundPosition: `50% ${innerHeight/8}px`
+        });
+}) 
+            
 bars.addEventListener('click', () => {
     ulLinks.classList.toggle('toggle');
     overlay.classList.toggle('overlay-full');
@@ -22,20 +46,17 @@ bars.addEventListener('click', () => {
     
 })
 
-let lastScrollTop = 0;
+// let lastScrollTop = 0;
 
-window.addEventListener('scroll', () => {
-    if(window.innerWidth >= 670){
-        let st = window.pageYOffset ;
-        if(st < lastScrollTop){
-            // links.style.opacity = '1';
-            links.style.top = '0%'
-        } else {
-            links.style.top = '-75px';
-        }
-        lastScrollTop = st;
-    }
+// window.addEventListener('scroll', () => {
+//     if(window.innerWidth >= 670){
+//         let st = window.pageYOffset ;
+//         if(st < lastScrollTop){
+//             links.style.top = '0%'
+//         } else {
+//             links.style.top = '-75px';
+//         }
+//         lastScrollTop = st;
+//     }
     
-})
-
-
+// })
