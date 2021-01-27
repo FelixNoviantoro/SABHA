@@ -8,6 +8,11 @@ const next2 = document.getElementById('next2')
 const back2 = document.getElementById('back2')
 const back3 = document.getElementById('back3')
 
+const nama = document.querySelectorAll('.fill')[0];
+const email = document.querySelectorAll('.fill')[1];
+const namaErr = document.getElementById('nama-err');
+const emailErr = document.getElementById('email-err');
+
 const yes = document.querySelector('.answer-yes')
 const no = document.querySelector('.answer-no')
 const answer = document.querySelectorAll('.answer')
@@ -73,7 +78,7 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
         tl.to('.next-button', {opacity : "0"}, '-=1');
 
         tl.to('.prolog', {background :'black'}, '-=1')
-        tl.to('.container', {y:"-100%"})
+        tl.to('.container', {y:"-100%", duration: 0}, '+=.5')
         tl.to('.nav-title', {y:"0%", stagger : 0.5}, "+=1")
         tl.to('nav', {y:"-40%", x:"-40%"}, "+=1")
         tl.to('.nav-outer', {scale: 0.5}, "-=1")
@@ -92,12 +97,12 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
         tl.from('.modal-inner',{scale: 1.5}, "-=1")
     })
 
-next1.addEventListener('click', () => {
+function move(){
     form1.style.right = '450px'
     form1.style.opacity = '0'
     form2.style.left = '0px'
     form2.style.opacity = '1'
-})
+}
 next2.addEventListener('click', () => {
     form2.style.right = '450px'
     form2.style.opacity = '0'
@@ -144,3 +149,22 @@ answer.forEach((e,i) => {
     )
 })
 
+next1.addEventListener('click',validated)
+
+function validated(){
+    if(nama.value.length == 0){
+        namaErr.style.display = "block"
+    } else {
+        namaErr.style.display = "none"
+    }
+    
+    if (email.value.length == 0){
+        emailErr.style.display = "block"
+    } else {
+        emailErr.style.display = "none"
+    }
+
+    if (nama.value.length !== 0 && email.value.length !== 0){
+        move()
+    }
+}

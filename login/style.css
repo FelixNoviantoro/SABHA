@@ -1,7 +1,12 @@
+@font-face {
+    font-family: "Lato-light";
+    src: url('../main/fonts/Lato-Light.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lato-light", Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .container {
@@ -19,16 +24,17 @@ nav {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-bottom: -30px;
 }
 .outer {
-    width: 35%;
-    height: 80%;
+    width: 30%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     background: white;
-    padding: 50px;
+    padding-bottom: -20px;
     border-radius: 10px;
 }
 main {
@@ -37,7 +43,12 @@ main {
     align-items: center;
     justify-content: space-evenly;
 }
-main input {
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form input {
     width: 125%;
     padding: 10px 5px;
     margin: 5px 0;
@@ -45,10 +56,23 @@ main input {
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
-    font-size: 20px;
+    font-size: 18px;
 }
 ::placeholder {
     color: black;
+}
+#email-err, #pass-err {
+    background: rgba(255, 0, 0, .2) ;
+    border: 1px solid rgba(255, 0, 0, .7);
+    text-align: center;
+    color: rgba(255, 0, 0, .7);
+    width: 125%;
+    padding: 3px;
+    font-size: smaller;
+    display: none;
+}
+#email-err {
+    margin-bottom: 15px;
 }
 .check {
     display: flex;
@@ -56,24 +80,20 @@ main input {
     align-items: center;
     width: 100%;
     padding: 20px;
-
+    margin-top: 10px;
 }
 .check input {
-    width: 50%;
-    cursor: pointer;
-    /* background: yellow; */
+    width: 30%;
 }
 .check span {
     display: inline-block;
     font-size: 22px;
-    /* background: yellowgreen; */
     width: 100%;
 }
 
 .btn-box {
     width: 100%;
     text-align: center;
-    /* background: blueviolet; */
 }
 .btn-box button {
     outline: none;
@@ -81,7 +101,7 @@ main input {
     width: 150px;
     height: 50px;
     border-radius: 25px;
-    background: #999;
+    background: rgb(77, 77, 77);
     color: white;
     transition: .3s;
     font-size: 20px;

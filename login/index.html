@@ -11,20 +11,25 @@
         <div class="outer">
             <nav></nav>
             <main>
-                <input type="text" name="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <div class="check">
-                    <input type="checkbox">
-                    <span>Remember Me</span>
-                </div>
-                <div class="btn-box">
-                    <button>LOGIN</button>
-                </div>
+                <form action="" method="POST" onsubmit="return validated()">
+                    <input type="text" name="email" placeholder="Email">
+                    <div id="email-err">Please fill up your email correctly</div>
+                    <input type="password" placeholder="Password">
+                    <div id="pass-err">Please fill up your password correctly</div>
+                    <div class="check">
+                        <input type="checkbox">
+                        <span>Remember Me</span>
+                    </div>
+                    <div class="btn-box">
+                        <button>LOGIN</button>
+                    </div>
+                </form>
+                
             </main>
-            <footer>
+            <!-- <footer>
                 <p><a href="">Forgot Your Password?</a></p>
                 <p>Don't have an account? <a href="">Register</a> here.</p>
-            </footer>  
+            </footer> -->
         </div>
     </div>
     

@@ -15,7 +15,9 @@ tl.to('.intro', {opacity: "0", y: "-50%", duration: 1.5 })
 tl.to('.intro', {visibility: "hidden"},'-=.5')
 
 tl.from('.title-main', {opacity:0, y:"-50%"})
+if(window.innerWidth > 670) {
 tl.from('.nav-links ul li', {opacity: "0", y:"100%", stagger:.2})
+}
 tl.from('.title-search', {opacity:"0"})
 tl.from('main', {opacity:"0", y: "10%", duration: 1}, "-=1")
 tl.from('header', {opacity:"0"}, "-=1")
@@ -30,11 +32,23 @@ gsap.utils.toArray('.main-bg').forEach((e, i) => {
                 start : "top center",
                 end : "bottom center",
                 scrub : true
-                // markers : true
             },
-            backgroundPosition: `50% ${innerHeight/4}px`
+            // backgroundPosition: `50% ${innerHeight/4}px`
+            backgroundPosition: `50% 200px`
         });
 }) 
+
+// gsap.from('footer', {
+//     scrollTrigger : {
+//         trigger : 'footer',
+//         start : 'bottom bottom',
+//         end : 'bottom top',
+//         scrub : true,
+//         pin : 'footer',
+//         markers : true
+//     },
+//     yPercent: -100
+// })
             
 bars.addEventListener('click', () => {
     ulLinks.classList.toggle('toggle');
