@@ -53,6 +53,16 @@ nav {
     font-size: 20px;
     font-family: "Lato-light";
 }
+.nav-logo {
+    background: url('./images/navbar/B&W.png');
+    height: 150px;
+    width: 75px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+}
 .title-search ul{
     display: flex;
     position: absolute;
@@ -286,8 +296,8 @@ header {
     height: 30px;
 }
 /* header===================================== */
-footer {
-    height:75vh;
+/* footer {
+    height:50vh;
     width: 100%;
     background: black;
     position: fixed;
@@ -318,7 +328,7 @@ footer .content {
     height: 100%;
     justify-content: flex-end;
     padding: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 300px;
 }
 .footer-left {
     align-items: flex-start;
@@ -343,7 +353,77 @@ footer .content {
 }
 
 .empty {
-    height: 85vh;
+    height: 50vh;
+    background:white;
+    position: relative;
+    z-index: -2;
+} */
+
+footer {
+    height:50vh;
+    width: 100%;
+    background: black;
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+}
+footer .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    height: 70vh;
+    font-size: 1.5vw;
+    justify-content: flex-end;
+}
+.footer-logo {
+    width: 100px;
+    height: 200px;
+    background: url('./images/footer/Logo\ Gold.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer-left , .footer-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+    padding: 100px;
+    padding-bottom: 200px;
+}
+.footer-left {
+    align-items: flex-start;
+}
+.footer-left p , .footer-right p{
+    padding-top: 10px;
+}
+.footer-right {
+    align-items: flex-end;
+    text-align: end;
+}
+.social-1 img, .social-2 img, .copyright img {
+    height: 20px;
+    width: 20px;
+}
+.social-2 {
+    padding-bottom: 10px;
+}
+.copyright {
+    font-size: 1vw;
+    opacity: .5;
+}
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.empty {
+    height: 50vh;
     background:white;
     position: relative;
     z-index: -2;

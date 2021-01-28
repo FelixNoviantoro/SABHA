@@ -32,6 +32,7 @@ body {
     height: 10px;
     border: 1px solid black;
     background: white;
+    z-index: 11;
 }
 .follower {
     width: 30px;
@@ -39,6 +40,7 @@ body {
     background: black;
     border: 2px solid white;
     opacity: .8;
+    z-index: 10;
 }
 
 /* PROLOG ================================================= */
@@ -252,8 +254,6 @@ form {
     color: white;
 }
 #nama-err, #email-err {
-    /* border: 1px solid rgba(255, 0, 0, .2); */
-    /* background: rgba(255, 0, 0, .; */
     font-size: 17px;
     padding: 5px;
     color: rgba(255, 0, 0, .8);
@@ -344,6 +344,21 @@ form {
     align-items: center;
     opacity: .7;
 }
+.modal-inner button {
+    margin-top: 100px;
+    background: white;
+    color: black;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+    height: 30px;
+    display: inline-block;
+    transition: .2s;
+}
+.modal-inner button:hover {
+    background: black;
+    color: white;
+}
 
 @media screen and (max-width : 670px){
     body {
@@ -353,9 +368,11 @@ form {
     }
     .container {
         display: none;
+        height: 150vh;
+        transform: translateX(-25%);
     }
     .prolog {
-        height: 120vh;
+        height: 150vh;
         width: 100vw;
     }
     .prolog-outer {
@@ -411,8 +428,8 @@ form {
     
 
 }
-@media screen and (max-width : 415px){
+/* @media screen and (max-width : 415px){
     .container {
         transform: translateX(-25%);
     }
-}
+} */

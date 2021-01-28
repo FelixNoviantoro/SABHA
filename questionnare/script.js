@@ -85,6 +85,7 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
         tl.to('.container', {x:"0%"},'-=2')
         tl.to('.nav-outer', {scale: 0.5}, "-=1")
         tl.to('form', {opacity:"1"})
+        // tl.to('.prolog', {display : "none"})
         
 
     nextButton.addEventListener('click', function(){
@@ -97,6 +98,7 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
         tl.from('.modal', {height : "0%"})
         tl.from('.modal', {width : "50%"})
         tl.from('.modal-inner',{scale: 1.5}, "-=1")
+        tl.from('.modal-inner button', {opacity:"0"})
     })
 
 function move(){

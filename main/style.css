@@ -48,10 +48,21 @@ nav {
     left: 10%;
     opacity: 0;
     z-index: 2;
+    display: none;
 }
 .title-main h1{
     font-size: 20px;
     font-family: "Lato-light";
+}
+.nav-logo {
+    background: url('./images/navbar/B&W.png');
+    height: 150px;
+    width: 75px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
 }
 .title-search ul{
     display: flex;
@@ -233,7 +244,7 @@ header {
 }
 /* header===================================== */
 footer {
-    height:75vh;
+    height:50vh;
     width: 100%;
     background: black;
     position: fixed;
@@ -264,7 +275,7 @@ footer .content {
     height: 100%;
     justify-content: flex-end;
     padding: 100px;
-    padding-bottom: 150px;
+    padding-bottom: 450px;
 }
 .footer-left {
     align-items: flex-start;
@@ -276,9 +287,16 @@ footer .content {
     align-items: flex-end;
     text-align: end;
 }
-.social-1 img, .social-2 img {
+.social-1 img, .social-2 img, .copyright img {
     height: 20px;
     width: 20px;
+}
+.social-2 {
+    padding-bottom: 10px;
+}
+.copyright {
+    font-size: 1vw;
+    opacity: .5;
 }
 .social {
     display: flex;
@@ -289,7 +307,7 @@ footer .content {
 }
 
 .empty {
-    height: 80vh;
+    height: 50vh;
     background:white;
     position: relative;
     z-index: -2;
@@ -359,6 +377,7 @@ footer .content {
         cursor: pointer;
         opacity: .5;
         transform: scale(.7);
+        display: block;
     }
     .nav-links {
         background: transparent;
@@ -414,10 +433,11 @@ footer .content {
     }
     .footer-right, .footer-left{
         font-size: 11px;
-        padding: 20px;
+        padding: 30px;
         align-items: flex-start;
         text-align: left;
         height: 30%;
+        padding-bottom: 0;
     }
     .footer-left {
         justify-content: flex-end;
