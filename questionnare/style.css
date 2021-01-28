@@ -346,10 +346,18 @@ form {
 }
 
 @media screen and (max-width : 670px){
+    body {
+        height: 100vh;
+        width: 80vw;
+        overflow: hidden;
+    }
     .container {
         display: none;
     }
-    
+    .prolog {
+        height: 120vh;
+        width: 100vw;
+    }
     .prolog-outer {
         padding-left: 5%;
     }
@@ -357,7 +365,7 @@ form {
         width: 90%;
     }
     .prolog-3 {
-        /* left: 10?%; */
+        left: 5%;
     }
 
     .hide-outer, .hide-title {
@@ -379,7 +387,9 @@ form {
         width: auto;
     }
     .image-teteh-2 {
-        width: 175%;
+        /* width: 175%; */
+        height: 100%;
+        /* bottom: 20%; */
     }
     .image-teteh-3 {
         height: 100%;
