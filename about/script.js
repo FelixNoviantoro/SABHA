@@ -21,6 +21,7 @@ bars.addEventListener('click', () => {
         barImg.src = './images/navbar/close.png';
     } else {
         barImg.src = './images/navbar/menu.png';
+        dropdownUl.classList.remove('nav-toggle')
     }
     
 })

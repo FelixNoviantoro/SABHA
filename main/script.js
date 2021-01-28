@@ -49,6 +49,7 @@ bars.addEventListener('click', () => {
     } else {
         barImg.src = './images/navbar/menu.png';
         overlay.style.display = "none"
+        dropdownUl.classList.remove('nav-toggle')
     }
 })
 drop.addEventListener('click', (e) => {
