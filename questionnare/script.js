@@ -78,9 +78,11 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
         tl.to('.next-button', {opacity : "0"}, '-=1');
 
         tl.to('.prolog', {background :'black'}, '-=1')
+        tl.to('.container',{display : "block"}, '-=1')
         tl.to('.container', {y:"-100%", duration: 0}, '+=.5')
         tl.to('.nav-title', {y:"0%", stagger : 0.5}, "+=1")
         tl.to('nav', {y:"-40%", x:"-40%"}, "+=1")
+        tl.to('.container', {x:"0%"},'-=2')
         tl.to('.nav-outer', {scale: 0.5}, "-=1")
         tl.to('form', {opacity:"1"})
         
@@ -98,39 +100,39 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
     })
 
 function move(){
-    form1.style.right = '450px'
+    form1.style.right = '100%'
     form1.style.opacity = '0'
-    form2.style.left = '0px'
+    form2.style.left = '0%'
     form2.style.opacity = '1'
 }
 next2.addEventListener('click', () => {
-    form2.style.right = '450px'
+    form2.style.right = '100%'
     form2.style.opacity = '0'
-    form3.style.left = '0px'
+    form3.style.left = '0%'
     form3.style.opacity = '1'
 })
 next3.addEventListener('click', () => {
-    form3.style.right = '450px'
+    form3.style.right = '100%'
     form3.style.opacity = '0'
-    form4.style.left = '0px'
+    form4.style.left = '0%'
     form4.style.opacity = '1'
 })
 back2.addEventListener('click', () => {
-    form1.style.right = '0px'
+    form1.style.right = '0%'
     form1.style.opacity = '1'
-    form2.style.left = '450px'
+    form2.style.left = '100%'
     form2.style.opacity = '0'
 })
 back3.addEventListener('click', () => {
-    form2.style.right = '0px'
+    form2.style.right = '0%'
     form2.style.opacity = '1'
-    form3.style.left = '450px'
+    form3.style.left = '100%'
     form3.style.opacity = '0'
 })
 back4.addEventListener('click', () => {
-    form3.style.right = '0px'
+    form3.style.right = '0%'
     form3.style.opacity = '1'
-    form4.style.left = '450px'
+    form4.style.left = '100%'
     form4.style.opacity = '0'
 })
 

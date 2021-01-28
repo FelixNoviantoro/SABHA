@@ -206,6 +206,7 @@ nav {
     background: black;
     position: relative;
     z-index: 5;
+    display: none;
 }
 form {
     width: 450px;
@@ -221,7 +222,7 @@ form {
 }
 
 .form-inner {
-    width: 450px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 30px 50px;
@@ -230,7 +231,7 @@ form {
     transition: .5s;
 }
 #form2, #form3, #form4 {
-    left: 450px;
+    left: 100%;
 }
 .label {
     font-size: smaller;
@@ -345,6 +346,10 @@ form {
 }
 
 @media screen and (max-width : 670px){
+    .container {
+        display: none;
+    }
+    
     .prolog-outer {
         padding-left: 5%;
     }
@@ -352,17 +357,17 @@ form {
         width: 90%;
     }
     .prolog-3 {
-        left: 10%;
+        /* left: 10?%; */
     }
 
     .hide-outer, .hide-title {
         text-align: center;
     }
     .hide-outer {
-        font-size: 20px;
+        font-size: 18px;
     }
     .hide-title {
-        font-size: 45px;
+        font-size: 30px;
     }
 
     .image-teteh-1, .image-teteh-2 {
@@ -385,10 +390,19 @@ form {
     .next-button:hover {
         transform: scale(1.1) translate(0%, 50px );
     }
-}
-
-/* @media screen and (max-width : 900px) and (min-width : 671px){
-    .image-teteh-1, .image-teteh-2 {
-        opacity: .5;
+    .fill {
+        width: 70%;
+        font-size: 15px;
     }
-} */
+    #nama-err, #email-err {
+        transform: translateX(15%);
+        font-size: 12px;
+    }
+    
+
+}
+@media screen and (max-width : 415px){
+    .container {
+        transform: translateX(-25%);
+    }
+}

@@ -4,6 +4,9 @@ const ulLinks = document.querySelector('.nav-links ul');
 const bars = document.querySelector('.title-bars');
 const barImg = document.querySelector('.bars');
 const overlay = document.querySelector('.overlay');
+const dropdown = document.querySelector('.dropdown')
+const dropdownUl = document.querySelector('.nav-links li.dropdown ul')
+const drop = document.getElementById('drop')
 
 // const tl = gsap.timeline({defaults: {ease :"power4.out", duration : .5}})
 // tl.from('.title-content h1', {opacity: "0", duration: 1 , delay: 1})
@@ -20,6 +23,14 @@ bars.addEventListener('click', () => {
         barImg.src = './images/navbar/menu.png';
     }
     
+})
+
+drop.addEventListener('click', (e) => {
+    e.preventDefault()
+})
+
+dropdown.addEventListener('click', ()=>{
+    dropdownUl.classList.toggle('nav-toggle')
 })
 
 const mainContent = document.querySelector('.main-content')
@@ -59,14 +70,18 @@ subContent.forEach((e,i) => {
         scrollTrigger : {
             trigger : e,
             toggleClass : 'active',
-            start : 'top 70%',
-            end : 'top 25%',
+            start : '-40% bottom',
+            end : '-40% 70%',
             scrub : true,
             markers : true
         }
         
     })
 })
+
+        // console.log(images.scrollTop);
+        // var scrollHeight = document.getElementById('box').scrollHeight;
+        // var offsetHeight = document.getElementById('box').offsetHeight;
 
 // subContent.forEach((e,i) => {
 //     ScrollTrigger.create({
