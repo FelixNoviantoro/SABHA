@@ -53,6 +53,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: 1s;
+    /* display: none; */
 }
 .prolog-outer {
     display: flex;
@@ -182,16 +183,17 @@ body {
 nav {
     position: absolute;
     color: blanchedalmond;
-    top: 40%;
-    left: 42%;
+    top: 0;
+    left: 10%;
     font-size: 60px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 100vh;
-    width: 100%;
+    height: 30px;
+    width: auto;
 }
 .nav-outer {
     display: inline-block;
     overflow: hidden;
+    transform: translate();
 }
 .nav-title {
     transform: translateY(100%);
@@ -206,9 +208,9 @@ nav {
     align-items: center;
     transition: 1s;
     background: black;
-    position: relative;
-    z-index: 5;
-    display: none;
+    position: fixed;
+    z-index: -5;
+    /* display: none; */
 }
 form {
     width: 450px;
@@ -220,7 +222,6 @@ form {
     position: relative;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
-    opacity: 0;
 }
 
 .form-inner {
@@ -361,16 +362,6 @@ form {
 }
 
 @media screen and (max-width : 670px){
-    body {
-        height: 100vh;
-        width: 80vw;
-        overflow: hidden;
-    }
-    .container {
-        display: none;
-        height: 150vh;
-        transform: translateX(-25%);
-    }
     .prolog {
         height: 150vh;
         width: 100vw;
@@ -383,6 +374,9 @@ form {
     }
     .prolog-3 {
         left: 5%;
+    }
+    .nav-title {
+        font-size: 30px;
     }
 
     .hide-outer, .hide-title {
@@ -404,9 +398,7 @@ form {
         width: auto;
     }
     .image-teteh-2 {
-        /* width: 175%; */
         height: 100%;
-        /* bottom: 20%; */
     }
     .image-teteh-3 {
         height: 100%;
@@ -425,11 +417,4 @@ form {
         transform: translateX(15%);
         font-size: 12px;
     }
-    
-
 }
-/* @media screen and (max-width : 415px){
-    .container {
-        transform: translateX(-25%);
-    }
-} */

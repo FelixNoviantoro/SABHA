@@ -4,9 +4,9 @@ const ulLinks = document.querySelector('.nav-links ul');
 const bars = document.querySelector('.title-bars');
 const barImg = document.querySelector('.bars');
 const overlay = document.querySelector('.overlay');
-const dropdown = document.querySelector('.dropdown')
-const dropdownUl = document.querySelector('.nav-links li.dropdown ul')
-const drop = document.getElementById('drop')
+// const dropdown = document.querySelector('.dropdown')
+// const dropdownUl = document.querySelector('.nav-links li.dropdown ul')
+// const drop = document.getElementById('drop')
 
 // const tl = gsap.timeline({defaults: {ease :"power4.out", duration : .5}})
 // tl.from('.title-content h1', {opacity: "0", duration: 1 , delay: 1})
@@ -21,18 +21,18 @@ bars.addEventListener('click', () => {
         barImg.src = './images/navbar/close.png';
     } else {
         barImg.src = './images/navbar/menu.png';
-        dropdownUl.classList.remove('nav-toggle')
+        // dropdownUl.classList.remove('nav-toggle')
     }
     
 })
 
-drop.addEventListener('click', (e) => {
-    e.preventDefault()
-})
+// drop.addEventListener('click', (e) => {
+//     e.preventDefault()
+// })
 
-dropdown.addEventListener('click', ()=>{
-    dropdownUl.classList.toggle('nav-toggle')
-})
+// dropdown.addEventListener('click', ()=>{
+//     dropdownUl.classList.toggle('nav-toggle')
+// })
 
 const mainContent = document.querySelector('.main-content')
 
@@ -63,7 +63,23 @@ gsap.to('.main-subcontent', {
     }
 })
 
-subContent.forEach((e,i) => {
+if (window.innerWidth <= 670){
+    subContent.forEach((e,i) => {
+        gsap.to(e,{ 
+            duration : 1, 
+            x : "0%",
+            opacity : "1",
+            scrollTrigger : {
+                trigger : e,
+                toggleClass : 'active',
+                start : '-40% bottom',
+                end : '-40% 60%',
+                scrub : true
+            }
+        })
+    })
+} else {
+    subContent.forEach((e,i) => {
     gsap.to(e,{ 
         duration : 1, 
         x : "0%",
@@ -75,79 +91,8 @@ subContent.forEach((e,i) => {
             end : '-40% 70%',
             scrub : true
         }
-        
     })
 })
+}
 
-        // console.log(images.scrollTop);
-        // var scrollHeight = document.getElementById('box').scrollHeight;
-        // var offsetHeight = document.getElementById('box').offsetHeight;
 
-// subContent.forEach((e,i) => {
-//     ScrollTrigger.create({
-//         trigger : e,
-//         toggleClass : 'active',
-//         start : 'top 70%',
-//         end : 'top 25%',
-//         scrub : true,
-//         markers : true
-//     })
-// })
-
-// gsap.from('.main-content', {
-//     duration : 1,
-//     scrollTrigger : {
-//         trigger : '.main-content',
-//         start : 'top 150px',
-//         endTrigger : 'header',
-//         end : 'top 85%',
-//         pin : '.main-content',
-//         markers : true,
-//         pinSpacing : false
-//     }
-// })
-
-// gsap.from('.subcontent-1', {
-//     opacity: "0",
-//     duration : .5,
-//     scrollTrigger : {
-//         trigger : '.main-content',
-//         start : 'top 150px',
-//         endTrigger : 'header',
-//         end : 'top 85%',
-//         pin : '.subcontent-1',
-//         pinSpacing : false,
-//         toggleActions : 'restart none pause none',
-//         markers : true
-//     }
-// })
-
-// gsap.from('.subcontent-2', {
-//     opacity: "0",
-//     duration : .5,
-//     scrollTrigger : {
-//         trigger : '.subcontent-2',
-//         start : `${-mainContent.offsetHeight - 30}px 150px`,
-//         endTrigger : 'header',
-//         end : 'top 85%',
-//         pin : '.subcontent-2',
-//         pinSpacing : false,
-//         toggleActions : 'restart none pause none',
-//         markers : true
-//     }
-// })
-
-// gsap.from('.subcontent-3', {
-//     opacity: "0",
-//     duration : .5,
-//     scrollTrigger : {
-//         trigger : '.subcontent-3',
-//         start : `${-mainContent.offsetHeight - 30}px 150px`,
-//         endTrigger : 'header',
-//         end : 'top 85%',
-//         pin : '.subcontent-3',
-//         pinSpacing : false,
-//         toggleActions : 'restart none  none',
-//         markers : true
-//     }
-// })
