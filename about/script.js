@@ -4,15 +4,6 @@ const ulLinks = document.querySelector('.nav-links ul');
 const bars = document.querySelector('.title-bars');
 const barImg = document.querySelector('.bars');
 const overlay = document.querySelector('.overlay');
-// const dropdown = document.querySelector('.dropdown')
-// const dropdownUl = document.querySelector('.nav-links li.dropdown ul')
-// const drop = document.getElementById('drop')
-
-// const tl = gsap.timeline({defaults: {ease :"power4.out", duration : .5}})
-// tl.from('.title-content h1', {opacity: "0", duration: 1 , delay: 1})
-// tl.to('.list-content li', {y: "-10px"})
-// tl.to('.list-content li', {y: "-125%"})
-// tl.to('.list-content li', {y: "-220%"})
             
 bars.addEventListener('click', () => {
     ulLinks.classList.toggle('toggle');
@@ -21,18 +12,9 @@ bars.addEventListener('click', () => {
         barImg.src = './images/navbar/close.png';
     } else {
         barImg.src = './images/navbar/menu.png';
-        // dropdownUl.classList.remove('nav-toggle')
     }
     
 })
-
-// drop.addEventListener('click', (e) => {
-//     e.preventDefault()
-// })
-
-// dropdown.addEventListener('click', ()=>{
-//     dropdownUl.classList.toggle('nav-toggle')
-// })
 
 const mainContent = document.querySelector('.main-content')
 
@@ -42,11 +24,9 @@ gsap.registerPlugin(ScrollTrigger);
 tl.to('.intro', {opacity: "0", y: "-50%", duration: 1.5 })
 tl.to('.intro', {visibility: "hidden"},'-=.5')
 
-tl.from('.title-main', {opacity:0, y:"-50%"})
 if(window.innerWidth > 670) {
 tl.from('.nav-links ul li', {opacity: "0", y:"100%", stagger:.2})
 }
-tl.from('.title-search', {opacity:"0"})
 tl.from('main', {opacity:"0", y: "10%", duration: 1}, "-=1")
 tl.from('header', {opacity:"0"}, "-=1")
 tl.from("footer", {opacity:"0"})
@@ -62,6 +42,42 @@ gsap.to('.main-subcontent', {
         scrub : true
     }
 })
+
+gsap.from('.words', {
+    x : "30%",
+    opacity : "0",
+    scrollTrigger : {
+        trigger : '.tubuh',
+        start : 'top bottom',
+        end : 'top 70%',
+        scrub : true
+    }
+})
+gsap.from('.tubuh img', {
+    x : "-30%",
+    opacity : "0",
+    scrollTrigger : {
+        trigger : '.tubuh',
+        start : 'top bottom',
+        end : 'top 70%',
+        scrub : true
+    }
+})
+if(window.innerWidth >= 670){
+    gsap.to('.nav-links', {
+    background : 'black',
+    color : 'white',
+    duration : .5,
+    scrollTrigger : {
+        trigger : '.main-subcontent',
+        start : '-15% 100px',
+        end : '-15% 100px',
+        toggleActions : 'play none reverse none'
+    }
+})
+}
+
+
 
 if (window.innerWidth <= 670){
     subContent.forEach((e,i) => {
@@ -95,4 +111,18 @@ if (window.innerWidth <= 670){
 })
 }
 
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+    if(window.innerWidth >= 670){
+        let st = window.pageYOffset ;
+        if(st < lastScrollTop){
+            links.style.top = '0%'
+        } else {
+            links.style.top = '-100px';
+        }
+        lastScrollTop = st;
+    }
+    
+})
 

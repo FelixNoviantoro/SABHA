@@ -14,8 +14,9 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Lato-light";
+    font-family: 'Playfair Display', serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -25,7 +26,7 @@
 
 /* nav ======================================== */
 nav {
-    height: 150px;
+    height: 200px;
     width: 100%;
     background: transparent;
     display: flex;
@@ -35,22 +36,18 @@ nav {
 }
 
 .nav-title, .nav-links {
-    height: 50%;
     width: 100%;
     display: flex;
 }
 .nav-title {
+    height: 60%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: black;
     position: relative;
     z-index: 6;
 } 
-.nav-logo {
-    position: absolute;
-    right: 5%;
-}
 .nav-logo img {
     height: 75px;
 }
@@ -88,10 +85,12 @@ nav {
     width: 20px;
 }
 .nav-links {
-    background-color: white;
+    background: white;
     transition: .3s;
     position: relative;
     z-index: 5;
+    height: 40%;
+    color: black;
 }
 .nav-links ul{
     width: 100%;
@@ -104,38 +103,7 @@ nav {
     list-style: none;    
     position: relative;
 }
-.nav-links li.dropdown ul{
-    position: absolute;
-    left: 0;
-    background: white;
-    flex-direction: column;
-    display: none;
-    opacity: 0;
-    transition: 1s;
-    width: 110%;
-}
-.nav-links li.dropdown:hover ul {
-    opacity: 1;
-    display: flex;
-}
-.nav-links li.dropdown ul.nav-toggle {
-    opacity: 1;
-    display: flex;
-}
-.nav-links li.dropdown ul li {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.nav-links li.dropdown ul li:first-child {
-    padding-top: 30px;
-}
-.nav-links li.dropdown ul li:last-child {
-    padding-bottom: 20px;
-}
-.nav-links a {
-    position: relative;
-}
-.nav-links a:after, .nav-links li.dropdown ul li a:after {
+.nav-links a:after{
     content: '';
     position: absolute;
     left: 0;
@@ -147,16 +115,13 @@ nav {
     transform: translateX(-100%);
     transition: .3s;
 }
-.nav-links a:hover:after, .nav-links li.dropdown ul li a:hover:after {
+.nav-links a:hover:after{
     transform: translateX(0%);
     opacity: 1;
 }
-/* .nav-links li:nth-child(2) a:hover:after {
-    opacity: 0;
-} */
 .nav-links a {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 
@@ -174,7 +139,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 150vh;
+    height: 200vh;
     width: 100%;
 }
 .main-title {
@@ -198,12 +163,15 @@ main {
     padding: 100px;
     padding-left: 0;
     width: 70%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     font-family: "gotham-light";
+}
+.main-content img {
+    width: 40vw;
 }
 .main-content h1 {
     font-size: 60px;
@@ -218,6 +186,46 @@ main {
     justify-content: flex-start;
     align-items: center;
     color: white;
+}
+.tubuh {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    /* background: blue; */
+}
+.tubuh img {
+    width: 40vw;
+}
+.words {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 40%;
+}
+.words h1{
+    padding-bottom: 20px;
+    font-size: 3vw;
+}
+.words h3 {
+    font-size: 1.5vw;
+}
+.words button {
+    margin-top: 20px;
+    height: 40px;
+    border: none;
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: .7;
+    transition: .2s;
+}
+.words button:hover {
+    opacity: 1;
 }
 .subcontent {
     width: 80%;
@@ -240,10 +248,10 @@ main {
     align-items: center;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: visible;
 }
 .image-5 {
-    background: url('./images/main/visi/misi.png');
+    background: url('./images/main/Img/Mision.png');
 }
 .image-0 {
     background: url('./images/main/visi/visi.png');
@@ -262,7 +270,7 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     width: 70%;
-    height: 70%;
+    height: 50%;
     opacity: .5;
     margin-top: -200px;
 }
@@ -299,7 +307,6 @@ header {
 .header-logo img {
     width: 30px;
     height: 30px;
-    font-family: l;
 }
 /* header===================================== */
 
@@ -343,15 +350,16 @@ footer .content {
 }
 .footer-left p , .footer-right p{
     padding-top: 10px;
+    font-size: 1.2vw;
 }
 .footer-right {
     align-items: flex-end;
     text-align: end;
 }
 .social-1 img, .social-2 img {
+    margin-right: 10px;
     height: 20px;
     width: 20px;
-    margin-right: 10px;
 }
 .copyright img {
     height: 10px;
@@ -485,6 +493,7 @@ footer .content {
     }
     .main-page {
         height: 100vh;
+        margin-top: 100px;
     }
     .main-image {
         width: 200%;
@@ -492,10 +501,29 @@ footer .content {
     .main-title {
         font-size: 20px;
     }
+    .tubuh {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        /* background: chartreuse; */
+        transform: translateY(-15%);
+    }
+    .words {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 70%;
+    }
+    .words h3 {
+        font-size: 2vw;
+    }
+    .words button {
+        transform: scale(.5);
+    }
     .sub-images {
         background-position: bottom;
         position: absolute;
-        top: 0;
+        top: 120px;
     }
     .inner {
         flex-direction: column;
@@ -513,22 +541,23 @@ footer .content {
     footer {
         height: 90vh;
     }
-    .footer-main {
-        font-size: 16px;
-        width: 35%;
-    }
     footer .content {
         height: 100vh;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
+        width: 100%;
     }
-    .footer-right, .footer-left{
-        font-size: 11px;
-        padding: 20px;
+    .content .footer-right, .content .footer-left{
+        padding: 30px;
         align-items: flex-start;
         text-align: left;
         height: 30%;
+        padding-bottom: 0;
+        width: 50%;
+    }
+    .footer-left p , .footer-right p{
+        font-size: 11px;
     }
     .footer-left {
         justify-content: flex-end;
@@ -539,6 +568,9 @@ footer .content {
     .footer-logo {
         height: 100px;
         width: 50px;
+    }
+    .copyright {
+        display: none;
     }
     .empty {
         height: 90hv;
@@ -560,9 +592,9 @@ footer .content {
     .subcontent h1 {
         font-size: 30px;
     }
-    .subcontent .exp {
+    /* .subcontent .exp {
         font-size: 15px;
-    }
+    } */
     .inner {
         position: relative;
     }
