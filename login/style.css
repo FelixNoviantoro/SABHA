@@ -78,10 +78,9 @@ form input {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 125%;
+    width: 100%;
     padding-right: 20px;
     margin: 30px;
-    /* background: green;s */
     justify-content: flex-start;
 }
 .check input {
@@ -90,7 +89,7 @@ form input {
 .check span {
     display: inline-block;
     font-size: 18px;
-    width: 100%;
+    width: 80%;
 }
 
 .btn-box {
@@ -120,11 +119,17 @@ footer a {
 }
 
 @media screen and (max-width : 670px){
+    #email-err, #pass-err {
+        width: 80%;
+    }
+    .check {
+        width: 80%;
+    }
     .outer {
         width: 70%;
     }
     main input {
-        width: 100%;
+        width: 80%;
     }
 }
 

@@ -30,6 +30,11 @@ const follow = document.querySelector('.follower')
         gsap.to('.follower', 0.9, {x:e.pageX, y:e.pageY})
     })
 
+    if(window.innerWidth <= 670){
+        cur.style.display = "none"
+        follow.style.display = "none"
+    }
+
 const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: false})
 
         tl.to('.hide-1', {y:"0%", opacity:"1", stagger : 0.3}, "+=1");
@@ -78,20 +83,12 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
         tl.to('.next-button', {opacity : "0"}, '-=1');
 
         tl.to('.prolog', {background :'black'}, '-=1')
-        tl.to('.prolog', {display : "none", })
         tl.from('.container', {display : "none"});
         tl.from('.container', {opacity :"0"})
+        tl.to('.prolog', {display : "none", },'-=1')
         tl.to('.nav-title', {y:"0%", stagger : 0.5});
         tl.from('nav', {y:"-50%", x:"-50%", top:"50vh", left:"50vw"})
         tl.from('form', {opacity : "0"})
-        // tl.to('.container',{display : "block"}, '-=1')
-        // tl.to('.container', {y:"-100%", duration: 0}, '+=.5')
-        // tl.to('.nav-title', {y:"0%", stagger : 0.5}, "+=1")
-        // tl.to('nav', {y:"-40%", x:"-40%"}, "+=1")
-        // tl.to('.container', {x:"0%"},'-=2')
-        // tl.to('.nav-outer', {scale: 0.5}, "-=1")
-        // tl.to('form', {opacity:"1"})
-        // tl.to('.prolog', {display : "none"})
         
 
     nextButton.addEventListener('click', function(){
