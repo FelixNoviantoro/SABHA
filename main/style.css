@@ -17,6 +17,7 @@
     padding: 0;
     font-family: "Lato-light";
     font-family: 'Playfair Display', serif;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -181,7 +182,10 @@ main{
 .image-3 {
     background: url('./images/main/tamara-bellis-IwVRO3TLjLc-unsplash.jpg');
 }
-.image-1 ,.image-2, .image-3{
+.image-4 {
+    background: url('./images/main/laura-chouette-o8zUQZfCYpE-unsplash.jpg');
+}
+.image-1 ,.image-2, .image-3, .image-4{
     position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
@@ -238,11 +242,26 @@ main .content{
     height: 100%;
     top: 100px;
     color: white;
-    /* background: black; */
+    font-size: 1.3vw;
+}
+main .content.cek {
+    top: 0;
+    align-items: center;
+    width: 50%;
+    padding-left: 50px;
+    font-size: 1.3vw;
+}
+.content.cek h1 {
+    padding-bottom: 10px;
+    color: black;
+}
+.content.cek h3{
+    padding-bottom: 10px;
+    text-align: center;
 }
 main .tombol {
-    width: 100px;
-    height: 50px;
+    width: 7vw;
+    height: 3vw;
     background-color: white;
     color: black;
     display: flex;
@@ -252,6 +271,10 @@ main .tombol {
     transition: .3s;
     border-radius: 5px;
     margin-top: 30px;
+}
+.tombol a {
+    text-decoration: none;
+    color: inherit;
 }
 main .tombol:hover {
     background-color: black;
@@ -437,7 +460,6 @@ footer .content {
     }
     .nav-links {
         background: transparent;
-        
     }
     .nav-links ul {
         position: fixed;
@@ -475,6 +497,13 @@ footer .content {
     main .content {
         top: 0;
     }
+    main .tombol {
+        height: 5vw;
+        width: 10vw;
+    }
+    .tombol a {
+        font-size: 2vw;
+    }
     footer {
         height: 90vh;
     }
@@ -487,6 +516,7 @@ footer .content {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
+        transform: translateY(50px);
     }
     .footer-right, .footer-left{
         font-size: 11px;
@@ -502,6 +532,7 @@ footer .content {
     }
     .footer-right {
         justify-content: flex-start;
+        padding-top: 0;
     }
     .footer-logo {
         height: 100px;
@@ -520,10 +551,17 @@ footer .content {
         display: none;
     }
     main .content h1 {
-        font-size: 15px;
+        font-size: 4vw
     }
     main .content h3 {
-        font-size: 12px;
+        font-size: 4vw;
+    }
+    main .content .tombol {
+        height: 10vw;
+        width: 20vw;
+    }
+    .tombol a {
+        font-size: 4vw;
     }
     main .content span {
         transform: scale(.6);

@@ -8,10 +8,10 @@ const overlay = document.querySelector('.overlay');
 bars.addEventListener('click', () => {
     ulLinks.classList.toggle('toggle');
     overlay.classList.toggle('overlay-full');
-    if(barImg.attributes.src.nodeValue == "./images/navbar/menu.png"){
-        barImg.src = './images/navbar/close.png';
+    if(barImg.attributes.src.nodeValue == "./images/navbar/menu-icon-19347.png"){
+        barImg.src = './images/navbar/pngjoy.com_close-icon-close-button-png-icon-transparent-png_1062318.png';
     } else {
-        barImg.src = './images/navbar/menu.png';
+        barImg.src = "./images/navbar/menu-icon-19347.png";
     }
     
 })
