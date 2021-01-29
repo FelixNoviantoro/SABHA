@@ -441,7 +441,8 @@ footer .content {
     }
     .nav-links ul {
         position: fixed;
-        background-color: white;
+        background-color: black;
+        color: white;
         height: 100vh;
         width: 40%;
         display: flex;
@@ -494,6 +495,7 @@ footer .content {
         text-align: left;
         height: 30%;
         padding-bottom: 0;
+        width: 70%;
     }
     .footer-left {
         justify-content: flex-end;

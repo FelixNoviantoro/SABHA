@@ -254,7 +254,7 @@ main {
     background: url('./images/main/Img/Mision.png');
 }
 .image-0 {
-    background: url('./images/main/visi/visi.png');
+    background: url('./images/main/Img/Vision.png');
 }
 .image-1 {
     background: url('./images/main/Img/uhshiaap.png')
@@ -350,7 +350,7 @@ footer .content {
 }
 .footer-left p , .footer-right p{
     padding-top: 10px;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
 }
 .footer-right {
     align-items: flex-end;
@@ -362,13 +362,13 @@ footer .content {
     width: 20px;
 }
 .copyright img {
-    height: 10px;
-    width: 10px;
+    height: 1vw;
+    width: 1vw;
 }
 .social-2 {
     padding-bottom: 10px;
 }
-.copyright {
+.footer-right .copyright, .footer-left .copyright {
     font-size: 1vw;
     opacity: .5;
 }
@@ -464,7 +464,8 @@ footer .content {
     }
     .nav-links ul {
         position: fixed;
-        background-color: white;
+        background-color: black;
+        color: white;
         height: 100vh;
         width: 40%;
         display: flex;
@@ -505,7 +506,6 @@ footer .content {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        /* background: chartreuse; */
         transform: translateY(-15%);
     }
     .words {
@@ -548,13 +548,13 @@ footer .content {
         justify-content: flex-end;
         width: 100%;
     }
-    .content .footer-right, .content .footer-left{
+    .footer-right, .footer-left{
         padding: 30px;
         align-items: flex-start;
         text-align: left;
         height: 30%;
         padding-bottom: 0;
-        width: 50%;
+        width: 70%;
     }
     .footer-left p , .footer-right p{
         font-size: 11px;
