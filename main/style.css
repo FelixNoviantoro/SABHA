@@ -164,6 +164,8 @@ main{
     height: auto;
     width: 100%;
     margin-top: 150px;
+    position: relative;
+    z-index: 3;
 }
 .main-image {
     height: 400px;
@@ -188,6 +190,42 @@ main{
     height: 600px;
     width: 100%;
     transform: translateY(-200px);
+}
+.tagline {
+    text-align: center;
+    padding: 20px;
+    font-size: 2vw;
+}
+.visi-misi {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.visi-misi ul li {
+    list-style: none;
+    padding: 5px;
+}
+.visi-misi h2 {
+    padding: 10px;
+    font-size: 3.5vw;
+}
+.visi-misi h3 {
+    font-size: 2vw;
+}
+.visi, .misi {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+.image-0 {
+    background: black;
+    color: white;
+    height: 100%;
 }
 main .content{
     display: flex;
@@ -228,6 +266,8 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
+    z-index: 3;
 }
 .header-main {
     width: 50%;
@@ -244,11 +284,11 @@ header {
 }
 /* header===================================== */
 footer {
-    height:50vh;
+    height:60vh;
     width: 100%;
     background: black;
     position: fixed;
-    z-index: -1;
+    z-index: 0;
     bottom: 0;
 }
 footer .content {
@@ -275,7 +315,7 @@ footer .content {
     height: 100%;
     justify-content: flex-end;
     padding: 100px;
-    padding-bottom: 450px;
+    padding-bottom: 350px;
 }
 .footer-left {
     align-items: flex-start;
@@ -307,10 +347,10 @@ footer .content {
 }
 
 .empty {
-    height: 50vh;
+    height: 60vh;
     background:white;
     position: relative;
-    z-index: -2;
+    z-index: -100;
 }
 
 .intro {
@@ -362,6 +402,7 @@ footer .content {
         transition: .3s;
         background: rgba(0, 0, 0, 0);
         display: none;
+        z-index: 4;
     }
     .overlay.overlay-full {
         background: rgba(0, 0, 0, 0.5);

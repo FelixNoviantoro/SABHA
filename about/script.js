@@ -58,8 +58,8 @@ gsap.to('.main-subcontent', {
     scrollTrigger : {
         trigger : '.main-subcontent',
         start : 'top bottom',
-        end : 'top top',
-        scrub : true,
+        end : 'top center',
+        scrub : true
     }
 })
 
@@ -73,8 +73,7 @@ subContent.forEach((e,i) => {
             toggleClass : 'active',
             start : '-40% bottom',
             end : '-40% 70%',
-            scrub : true,
-            markers : true
+            scrub : true
         }
         
     })
