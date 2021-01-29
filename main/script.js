@@ -6,7 +6,8 @@ const barImg = document.querySelector('.bars');
 const overlay = document.querySelector('.overlay');
 const dropdown = document.querySelector('.dropdown')
 const dropdownUl = document.querySelector('.nav-links li.dropdown ul')
-const drop = document.getElementById('drop')
+const main = document.getElementsByTagName('main')
+// const drop = document.getElementById('drop')
 
 const tl = gsap.timeline({defaults: {ease :"power4.out", duration : .5}})
 tl.from('.title-content h1', {opacity: "0", duration: 1 , delay: 1})
@@ -52,25 +53,25 @@ bars.addEventListener('click', () => {
         dropdownUl.classList.remove('nav-toggle')
     }
 })
-drop.addEventListener('click', (e) => {
-    e.preventDefault()
-})
-
-dropdown.addEventListener('click', ()=>{
-    dropdownUl.classList.toggle('nav-toggle')
-})
-
-// let lastScrollTop = 0;
-
-// window.addEventListener('scroll', () => {
-//     if(window.innerWidth >= 670){
-//         let st = window.pageYOffset ;
-//         if(st < lastScrollTop){
-//             links.style.top = '0%'
-//         } else {
-//             links.style.top = '-75px';
-//         }
-//         lastScrollTop = st;
-//     }
-    
+// drop.addEventListener('click', (e) => {
+//     e.preventDefault()
 // })
+
+// dropdown.addEventListener('click', ()=>{
+//     dropdownUl.classList.toggle('nav-toggle')
+// })
+
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+    if(window.innerWidth >= 670){
+        let st = window.pageYOffset ;
+        if(st < lastScrollTop){
+            links.style.top = '0%'
+        } else {
+            links.style.top = '-100px';
+        }
+        lastScrollTop = st;
+    }
+    
+})
