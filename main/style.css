@@ -59,6 +59,9 @@ nav {
     z-index: 2;
     display: none;
 }
+.title-bars img {
+    width: 10vw;
+}
 .title-main h1{
     font-size: 20px;
     font-family: "Lato-light";
@@ -138,7 +141,7 @@ nav {
 .nav-links a {
     position: relative;
 }
-.nav-links a:after, .nav-links li.dropdown ul li a:after {
+.nav-links a:after{
     content: '';
     position: absolute;
     left: 0;
@@ -474,20 +477,19 @@ footer .content {
         transition: .4s;
         overflow: visible;
     }
+    .nav-links ul li a {
+        color: white;
+    }
+    /* .nav-links a:after{
+        content: '';
+        background-color: white;
+    } */
     .nav-links ul.toggle {
         transform: translateX(0);
     }
-    .nav-links li.dropdown ul {
-        position: absolute;
-        top: -30px;
-        left: 200%;
-        background: white;
-        height: auto;
-        width: 110%;
-    }
     .nav-links li {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         width: 100%;
         text-align: center;
     }
@@ -567,12 +569,29 @@ footer .content {
         transform: scale(.6);
     }
     .intro-title, .intro-list {
-        font-size: 15px;
+        font-size: 13px;
     }
     .intro-list li {
-        font-size: 25px;
+        font-size: 22px;
     }
     .header-main {
         font-size: 10px;
     }
+    /* .intro-title, .intro-list {
+        margin: 10px;
+        font-size: 20px;
+    }
+    .intro-list ul span{
+        display: inline-block;
+        height: 30px;
+        margin-top: 0%;
+        overflow: hidden;
+    }
+    
+    .intro-list li {
+        list-style: none;
+        padding: 10px;
+        font-size: 30px;
+        transform: translateY(100%);
+    } */
 }

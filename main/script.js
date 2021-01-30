@@ -44,22 +44,13 @@ gsap.utils.toArray('.main-bg').forEach((e, i) => {
 bars.addEventListener('click', () => {
     ulLinks.classList.toggle('toggle');
     overlay.classList.toggle('overlay-full');
-    if(barImg.attributes.src.nodeValue == "./images/navbar/menu.png"){
-        barImg.src = './images/navbar/close.png';
-        overlay.style.display = "block"
+    if(barImg.attributes.src.nodeValue == "./images/navbar/menu-icon-19347.png"){
+        barImg.src = './images/navbar/pngjoy.com_close-icon-close-button-png-icon-transparent-png_1062318.png';
     } else {
-        barImg.src = './images/navbar/menu.png';
-        overlay.style.display = "none"
-        dropdownUl.classList.remove('nav-toggle')
+        barImg.src = "./images/navbar/menu-icon-19347.png";
     }
+    
 })
-// drop.addEventListener('click', (e) => {
-//     e.preventDefault()
-// })
-
-// dropdown.addEventListener('click', ()=>{
-//     dropdownUl.classList.toggle('nav-toggle')
-// })
 
 let lastScrollTop = 0;
 

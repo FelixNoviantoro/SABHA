@@ -482,7 +482,10 @@ footer .content {
         transform: translateX(0);
     }
     .nav-links li {
-        padding-top: 80px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        text-align: center;
     }
     main {
         margin-top: -50px;
@@ -611,9 +614,12 @@ footer .content {
     .subcontent h1 {
         font-size: 30px;
     }
-    /* .subcontent .exp {
-        font-size: 15px;
-    } */
+    .intro-title, .intro-list {
+        font-size: 13px;
+    }
+    .intro-list li {
+        font-size: 22px;
+    }
     .inner {
         position: relative;
     }
