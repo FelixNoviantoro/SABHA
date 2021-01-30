@@ -7,7 +7,21 @@ const overlay = document.querySelector('.overlay');
 const dropdown = document.querySelector('.dropdown')
 const dropdownUl = document.querySelector('.nav-links li.dropdown ul')
 const main = document.getElementsByTagName('main')
-// const drop = document.getElementById('drop')
+const cur = document.querySelector('.cursor')
+const follow = document.querySelector('.follower')
+
+    gsap.set('.cursor',{xPercent: -50, yPercent: -50});
+    gsap.set('.follower',{xPercent: -50, yPercent: -50});
+
+    window.addEventListener('mousemove', e => {
+        gsap.to('.cursor', 0.2, {x:e.clientX, y:e.clientY})
+        gsap.to('.follower', 0.9, {x:e.clientX, y:e.clientY})
+    })
+
+    if(window.innerWidth <= 670){
+        cur.style.display = "none"
+        follow.style.display = "none"
+    }
 
 const tl = gsap.timeline({defaults: {ease :"power4.out", duration : .5}})
 tl.from('.title-content h1', {opacity: "0", duration: 1 , delay: 1})
@@ -22,7 +36,6 @@ tl.from('.title-main', {opacity:0, y:"-50%"})
 if(window.innerWidth > 670) {
 tl.from('.nav-links ul li', {opacity: "0", y:"100%", stagger:.2})
 }
-// tl.from('.title-search', {opacity:"0"})
 tl.from('main', {opacity:"0", y: "10%", duration: 1},'-=.5')
 tl.from('header', {opacity:"0"})
 tl.from("footer", {opacity:"0"})
@@ -44,12 +57,14 @@ gsap.utils.toArray('.main-bg').forEach((e, i) => {
 bars.addEventListener('click', () => {
     ulLinks.classList.toggle('toggle');
     overlay.classList.toggle('overlay-full');
-    if(barImg.attributes.src.nodeValue == "./images/navbar/menu-icon-19347.png"){
-        barImg.src = './images/navbar/pngjoy.com_close-icon-close-button-png-icon-transparent-png_1062318.png';
-    } else {
-        barImg.src = "./images/navbar/menu-icon-19347.png";
-    }
-    
+    bars.classList.toggle('close')
+    // if(barImg.attributes.src.nodeValue == "./images/navbar/menu-icon-19347.png"){
+    //     barImg.src = './images/navbar/pngjoy.com_close-icon-close-button-png-icon-transparent-png_1062318.png';
+    //     overlay.style.display = "block"
+    // } else {
+    //     barImg.src = "./images/navbar/menu-icon-19347.png";
+    //     overlay.style.display = "none"
+    // }
 })
 
 let lastScrollTop = 0;

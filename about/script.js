@@ -4,15 +4,33 @@ const ulLinks = document.querySelector('.nav-links ul');
 const bars = document.querySelector('.title-bars');
 const barImg = document.querySelector('.bars');
 const overlay = document.querySelector('.overlay');
+const cur = document.querySelector('.cursor')
+const follow = document.querySelector('.follower')
+
+    gsap.set('.cursor',{xPercent: -50, yPercent: -50});
+    gsap.set('.follower',{xPercent: -50, yPercent: -50});
+
+    window.addEventListener('mousemove', e => {
+        gsap.to('.cursor', 0.2, {x:e.clientX, y:e.clientY})
+        gsap.to('.follower', 0.9, {x:e.clientX, y:e.clientY})
+    })
+
+    if(window.innerWidth <= 670){
+        cur.style.display = "none"
+        follow.style.display = "none"
+    }
             
 bars.addEventListener('click', () => {
     ulLinks.classList.toggle('toggle');
     overlay.classList.toggle('overlay-full');
-    if(barImg.attributes.src.nodeValue == "./images/navbar/menu-icon-19347.png"){
-        barImg.src = './images/navbar/pngjoy.com_close-icon-close-button-png-icon-transparent-png_1062318.png';
-    } else {
-        barImg.src = "./images/navbar/menu-icon-19347.png";
-    }
+    bars.classList.toggle('close')
+    // if(barImg.attributes.src.nodeValue == "./images/navbar/menu-icon-19347.png"){
+    //     barImg.src = './images/navbar/pngjoy.com_close-icon-close-button-png-icon-transparent-png_1062318.png';
+    //     overlay.style.display = "block"
+    // } else {
+    //     barImg.src = "./images/navbar/menu-icon-19347.png";
+    //     overlay.style.display = "none"
+    // }
     
 })
 
