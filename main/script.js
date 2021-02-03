@@ -66,9 +66,9 @@ bars.addEventListener('click', () => {
     // }
 })
 
-// window.addEventListener('scroll', () => {
-//     navTitle.classList.toggle('sticky', window.scrollY > 0)
-// })
+window.addEventListener('scroll', () => {
+    navTitle.classList.toggle('sticky', window.scrollY > 0)
+})
 
 let lastScrollTop = 0;
 

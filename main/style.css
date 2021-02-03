@@ -20,7 +20,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Lato-light";
+    /* font-family: "Lato-light"; */
     font-family: 'Playfair Display', serif;
     scroll-behavior: smooth;
     cursor: none;
@@ -73,10 +73,18 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: var(--background-theme-1);
+    background-color: white;
     position: relative;
     z-index: 6;
+    display: none;
+    opacity: 0;
+    height: 0;
+    transition: .3s;
 } 
+.nav-title.sticky {
+    height: 40%;
+    opacity: 1;
+}
 .nav-links {
     height: 40%;
 }
@@ -94,25 +102,6 @@ nav {
 }
 .nav-logo img {
     height: 75px;
-}
-.title-search ul{
-    display: flex;
-    position: absolute;
-    flex-direction: row;
-    right: 20px;
-    justify-content: flex-start;
-    width: 20%;
-    opacity: 1;
-    top: 30px;
-}
-.title-search ul li{
-    list-style: none;
-    padding-right: 10px;
-    opacity: .5;
-    transition: .3s;
-}
-.title-search ul li:hover {
-    opacity: 1;
 }
 .icon {
     height: 20px;
@@ -135,6 +124,9 @@ nav {
 .nav-links li {
     list-style: none;    
     position: relative;
+}
+.nav-links ul li img {
+    width: 50px;
 }
 .nav-links li.dropdown ul{
     position: absolute;
@@ -192,7 +184,7 @@ nav {
 main{
     height: auto;
     width: 100%;
-    margin-top: 200px;
+    /* margin-top: 200px; */
     position: relative;
     z-index: 3;
 }
@@ -311,7 +303,7 @@ main .tombol:hover {
 
 /* footer====================================== */
 header {
-    height: 300px;
+    height: 250px;
     width: 100%;
     background: white;
     display: flex;
@@ -322,7 +314,7 @@ header {
     z-index: 3;
 }
 .header-main {
-    width: 50%;
+    width: 100%;
     text-align: center;
     font-weight: bold;
 }
@@ -331,16 +323,16 @@ header {
     font-size: 3rem;
 }
 .header-logo {
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 .header-logo a {
     padding: 10px;
 }
 .header-logo img {
-    width: 60px;
-    height: 60px;
-    margin-right: 2rem;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
 }
 /* header===================================== */
 footer {
@@ -377,7 +369,7 @@ footer .content {
     height: 100%;
     justify-content: flex-end;
     padding: 100px;
-    padding-bottom: 350px;
+    padding-bottom: 305px;
 }
 .footer-left {
     align-items: flex-start;
@@ -415,7 +407,7 @@ footer .content {
 }
 
 .empty {
-    height: 50vh;
+    height: 40vh;
     background:white;
     position: relative;
     z-index: -100;
@@ -477,6 +469,7 @@ footer .content {
     }
     .nav-title {
         justify-content: center;
+        display: flex;
     }
     .nav-title h1 {
         font-size: 20px;
@@ -487,7 +480,7 @@ footer .content {
         opacity: 1;
         transform: scale(.7);
         display: block;
-        background: url('./images/navbar/menu-icon-19347.png');
+        background: url('./images/navbar/menu.png');
         background-size: contain;
     }
     .title-bars.close {
@@ -499,8 +492,8 @@ footer .content {
     }
     .nav-links ul {
         position: fixed;
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
         height: 100vh;
         width: 40%;
         display: flex;
@@ -511,7 +504,7 @@ footer .content {
         overflow: visible;
     }
     .nav-links ul li a {
-        color: white;
+        color: black;
     }
     /* .nav-links a:after{
         content: '';
@@ -527,16 +520,16 @@ footer .content {
         text-align: center;
     }
     main {
-        margin-top: 75px;
+        /* margin-top: 75px; */
     }
     main .content {
         top: 0;
     }
     main .content h1 {
-        font-size: 3vw
+        font-size: 4vw
     }
     main .content h3 {
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
     main .tombol {
         height: 5vw;
@@ -550,8 +543,8 @@ footer .content {
     }
     .header-logo img {
         margin-right: .5rem;
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
     }
     footer {
         height: 90vh;
@@ -568,7 +561,7 @@ footer .content {
         transform: translateY(50px);
     }
     .footer-right, .footer-left{
-        font-size: 11px;
+        font-size: .85rem;
         padding: 30px;
         align-items: flex-start;
         text-align: left;

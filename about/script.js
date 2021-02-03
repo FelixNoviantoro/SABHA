@@ -64,8 +64,8 @@ gsap.to('.main-subcontent', {
 
 if(window.innerWidth > 670){
     gsap.to('.nav-links', {
-    background : 'black',
-    color : 'white',
+    background : 'white',
+    color : 'black',
     duration : .5,
     scrollTrigger : {
         trigger : '.main-subcontent',

@@ -21,8 +21,8 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: 'Playfair Display', serif; */
-    font-family: "lato-light";
+    font-family: 'Playfair Display', serif;
+    /* font-family: "lato-light"; */
     box-sizing: border-box;
     scroll-behavior: smooth;
     cursor: none;
@@ -34,6 +34,8 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    overflow-x: hidden;
 }
 .cursor, .follower {
     position: fixed;
@@ -85,16 +87,16 @@ nav {
     transform-origin: top;
     height: 0;
     opacity: 0;
-    color: white;
+    color: black;
     display: none;
 } 
 .nav-title.sticky {
-    background-color: black;
-    height: 60%;
+    background-color: white;
+    height: 40%;
     opacity: 1;
 }
 .nav-logo img {
-    height: 75px;
+    height: 55px;
 }
 .title-bars {
     position: absolute;
@@ -153,7 +155,7 @@ nav {
     position: relative;
 }
 .nav-links ul li a img {
-    width: 40px;
+    width: 28px;
 }
 .nav-links a:after{
     content: '';
@@ -162,7 +164,7 @@ nav {
     bottom: -5px;
     width: 100%;
     height: 3px;
-    background-color: white;
+    background-color: black;
     opacity: 0;
     transform: translateX(-100%);
     transition: .3s;
@@ -194,7 +196,7 @@ main {
     align-items: flex-end;
     height: 100vh;
     width: 100%;
-    background-image: url('./images/main/Img/WhatsApp\ Image\ 2021-02-02\ at\ 1.58.20\ PM.jpeg');
+    background-image: url('./images/main/Img/a.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -265,7 +267,7 @@ main {
 .subcontent-1 {
     margin-bottom: 10rem;   
     /* background-color: grey; */
-    background-color: var(--background-theme-1);
+    background-color: var(--background-theme-2);
 }
 .subcontent-5 .exp{
     color: var(--background-theme-3);
@@ -324,7 +326,7 @@ main {
     padding-bottom: 1em;
     position: relative;
     color: var(--background-theme-4);
-    font-family: "Lato-bold";
+    font-family:'Playfair Display', serif;;
 }
 .exp h1::after {
     content: '';
@@ -341,7 +343,7 @@ main {
 
 /* footer====================================== */
 header {
-    height: 200px;
+    height: 270px;
     width: 100%;
     background: white;
     display: flex;
@@ -352,19 +354,24 @@ header {
     z-index: 3;
 }
 .header-main {
-    width: 50%;
+    width: 100%;
     text-align: center;
     font-weight: bold;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
+}
+.header-main h1 {
+    font-family: 'Playfair Display', serif;
 }
 .header-logo {
-    width: 50%;
+    width: 100%;
     text-align: center;
+    /* margin: 200px; */
 }
 .header-logo img {
     width: 50px;
     height: 50px;
-    margin-right: 1.5rem;
+    margin-right: 1.7rem;
+
 }
 /* header===================================== */
 
@@ -408,7 +415,7 @@ footer .content {
 }
 .footer-left p , .footer-right p{
     padding-top: 10px;
-    font-size: 1.3vw;
+    font-size: 1.4vw;
 }
 .footer-right {
     align-items: flex-end;
@@ -439,7 +446,7 @@ footer .content {
 }
 
 .empty {
-    height: 50vh;
+    height: 40vh;
     background:white;
     position: relative;
     z-index: -100;
@@ -510,7 +517,7 @@ footer .content {
         opacity: 1;
         transform: scale(.7);
         display: block;
-        background: url('./images/navbar/menu-icon-19347.png');
+        background: url('./images/navbar/menu.png');
         background-size: contain;
     }
     .title-bars.close {
@@ -522,8 +529,8 @@ footer .content {
     }
     .nav-links ul {
         position: fixed;
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
         height: 100vh;
         width: 40%;
         display: flex;
@@ -616,14 +623,14 @@ footer .content {
 
     .subcontent-1 {
         margin-bottom: 10rem;
-        height: 670px;
+        height: 720px;
     }
     .header-main {
         font-size: 1rem;
     }
     .header-logo img {
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
     }
     footer {
         height: 90vh;
@@ -645,7 +652,7 @@ footer .content {
         width: 70%;
     }
     .footer-left p , .footer-right p{
-        font-size: 11px;
+        font-size: .85rem;
     }
     .footer-left {
         justify-content: flex-end;

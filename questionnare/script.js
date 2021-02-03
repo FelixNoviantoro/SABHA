@@ -88,7 +88,8 @@ const tl = gsap.timeline({defaults: {duration : 1, ease: "power2.out"}, paused: 
         tl.to('.prolog', {display : "none", },'-=1')
         tl.to('.nav-title', {y:"0%", stagger : 0.5});
         tl.from('nav', {y:"-50%", x:"-50%", top:"50vh", left:"50vw"})
-        tl.from('form', {opacity : "0"})
+        tl.from('.slider', {x:"100%", opacity : "0", display:"none"})
+        tl.from('form', {opacity : "0"}, "-=1")
         
 
     nextButton.addEventListener('click', function(){
