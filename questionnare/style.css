@@ -112,11 +112,10 @@ body {
     font-weight: 900;
 }
 .next-button {
-    margin-top: 100px;
     position: absolute;
-    top: 60%;
+    top: 75%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    /* transform: translate(-50%, 0%); */
     transition: .3s;
     opacity: .5;
     background: white;  
@@ -129,7 +128,7 @@ body {
     z-index: 2;
 }
 .next-button:hover {
-    transform: scale(1.2) translateX(-48%);
+    transform: scale(1.2);
 }
 .next-button img {
     transform: scale(.5);
@@ -261,7 +260,7 @@ form {
     background: transparent;
     border: none;
     border-bottom: 1px solid white;
-    color: white;
+    /* color: white; */
 }
 ::placeholder {
     color: white;
@@ -276,26 +275,27 @@ form {
 }
 .question {
     padding-bottom: 20px;
-    color: white;
+    /* color: white; */
     font-size: 1.6rem;
 }
 .answer {
-    border: 0.1vw solid white;
+    border: 0.1vw solid black;
     background: transparent;
     height: 2rem;
     width: 3.75rem;
-    color: white;
+    /* color: white; */
     margin: 20px;
     transition: .3s;
     font-size: 1rem;
     padding-bottom: 0.25rem;
 }
 .answer:hover {
-    background: white;
+    background: #f3d6c2;
     color: black;
 }
 .colored {
-    background: white;
+    background: #f3d6c2;
+    border: 0.1vw solid #f3d6c2;
     color: black;
 }
 .page {
@@ -428,11 +428,11 @@ form {
     .image-teteh-3 {
         height: 100%;
     }
-    .next-button {
+    /* .next-button {
         transform: translateY(50px) translateX(-55%);
-    }
+    } */
     .next-button:hover {
-        transform: scale(1.1) translate(0%, 50px );
+        transform: scale(1.1);
     }
     .fill {
         width: 70%;
