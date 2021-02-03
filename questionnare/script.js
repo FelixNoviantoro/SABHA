@@ -4,9 +4,9 @@ const form3 = document.getElementById('form3')
 const formInner = document.querySelectorAll('.form-inner')
 
 const next1 = document.getElementById('next1')
-const next2 = document.getElementById('next2')
-const back2 = document.getElementById('back2')
-const back3 = document.getElementById('back3')
+// const next2 = document.getElementById('next2')
+// const back2 = document.getElementById('back2')
+// const back3 = document.getElementById('back3')
 
 const nama = document.querySelectorAll('.fill')[0];
 const email = document.querySelectorAll('.fill')[1];
@@ -110,36 +110,36 @@ function move(){
     form2.style.left = '0%'
     form2.style.opacity = '1'
 }
-next2.addEventListener('click', () => {
-    form2.style.right = '100%'
-    form2.style.opacity = '0'
-    form3.style.left = '0%'
-    form3.style.opacity = '1'
-})
-next3.addEventListener('click', () => {
-    form3.style.right = '100%'
-    form3.style.opacity = '0'
-    form4.style.left = '0%'
-    form4.style.opacity = '1'
-})
-back2.addEventListener('click', () => {
-    form1.style.right = '0%'
-    form1.style.opacity = '1'
-    form2.style.left = '100%'
-    form2.style.opacity = '0'
-})
-back3.addEventListener('click', () => {
-    form2.style.right = '0%'
-    form2.style.opacity = '1'
-    form3.style.left = '100%'
-    form3.style.opacity = '0'
-})
-back4.addEventListener('click', () => {
-    form3.style.right = '0%'
-    form3.style.opacity = '1'
-    form4.style.left = '100%'
-    form4.style.opacity = '0'
-})
+// next2.addEventListener('click', () => {
+//     form2.style.right = '100%'
+//     form2.style.opacity = '0'
+//     form3.style.left = '0%'
+//     form3.style.opacity = '1'
+// })
+// next3.addEventListener('click', () => {
+//     form3.style.right = '100%'
+//     form3.style.opacity = '0'
+//     form4.style.left = '0%'
+//     form4.style.opacity = '1'
+// })
+// back2.addEventListener('click', () => {
+//     form1.style.right = '0%'
+//     form1.style.opacity = '1'
+//     form2.style.left = '100%'
+//     form2.style.opacity = '0'
+// })
+// back3.addEventListener('click', () => {
+//     form2.style.right = '0%'
+//     form2.style.opacity = '1'
+//     form3.style.left = '100%'
+//     form3.style.opacity = '0'
+// })
+// back4.addEventListener('click', () => {
+//     form3.style.right = '0%'
+//     form3.style.opacity = '1'
+//     form4.style.left = '100%'
+//     form4.style.opacity = '0'
+// })
 
 answer.forEach((e,i) => {
     e.addEventListener('click', () => {

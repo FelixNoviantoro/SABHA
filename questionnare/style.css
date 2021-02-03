@@ -223,8 +223,8 @@ nav {
     /* display: none; */
 }
 form {
-    width: 450px;
-    height: 400px;
+    width: 50vw;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,6 +233,7 @@ form {
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #b3a088;
+    padding: 1rem;
 }
 
 .form-inner {
@@ -276,17 +277,18 @@ form {
 .question {
     padding-bottom: 20px;
     color: white;
-    font-size: 30px;
+    font-size: 1.6rem;
 }
 .answer {
-    border: 1px solid white;
+    border: 0.1vw solid white;
     background: transparent;
-    width: 60px;
-    height: 30px;
+    height: 2rem;
+    width: 3.75rem;
     color: white;
     margin: 20px;
     transition: .3s;
-    /* border-radius: 5px; */
+    font-size: 1rem;
+    padding-bottom: 0.25rem;
 }
 .answer:hover {
     background: white;
@@ -304,16 +306,16 @@ form {
 }
 .next, .back {
     margin: 20px;
-    width: 80px;
-    height: 40px;
+    width: 5rem;
+    height: 2.5rem;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-radius: 5px; */
     opacity: .7;
     transition: .3s;
-    font-weight: bold
+    font-weight: bold;
+    font-size: 1rem;
 }
 .next {
     background: white;
@@ -373,6 +375,18 @@ form {
 }
 
 @media screen and (max-width : 670px){
+    form {
+        width: 70vw;
+    }
+    .question {
+        font-size: 1.4rem;
+    }
+    .answer {
+        height: 1.75rem;
+        width: 3.25rem;
+        font-size: 0.8rem;
+        padding-bottom: 0.125rem;
+    }
     .prolog {
         height: 150vh;
         width: 100vw;
