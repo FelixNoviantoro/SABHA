@@ -1,11 +1,10 @@
 const images = document.querySelectorAll('.main-image')[0];
 const links = document.querySelector('.nav-links');
+const navTitle = document.querySelector('.nav-title')
 const ulLinks = document.querySelector('.nav-links ul');
 const bars = document.querySelector('.title-bars');
 const barImg = document.querySelector('.bars');
 const overlay = document.querySelector('.overlay');
-const dropdown = document.querySelector('.dropdown')
-const dropdownUl = document.querySelector('.nav-links li.dropdown ul')
 const main = document.getElementsByTagName('main')
 const cur = document.querySelector('.cursor')
 const follow = document.querySelector('.follower')
@@ -66,6 +65,10 @@ bars.addEventListener('click', () => {
     //     overlay.style.display = "none"
     // }
 })
+
+// window.addEventListener('scroll', () => {
+//     navTitle.classList.toggle('sticky', window.scrollY > 0)
+// })
 
 let lastScrollTop = 0;
 

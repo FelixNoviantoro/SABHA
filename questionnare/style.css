@@ -178,7 +178,10 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background: black;
+    /* background: url('./img/9a793235c062445802703fa4bd3fd6bd.jpeg'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 nav {
     position: absolute;

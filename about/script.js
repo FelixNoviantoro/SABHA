@@ -1,4 +1,5 @@
 const images = document.querySelectorAll('.main-image')[0];
+const navTitle = document.querySelector('.nav-title')
 const links = document.querySelector('.nav-links');
 const ulLinks = document.querySelector('.nav-links ul');
 const bars = document.querySelector('.title-bars');
@@ -57,31 +58,11 @@ gsap.to('.main-subcontent', {
         trigger : '.main-subcontent',
         start : 'top bottom',
         end : 'top center',
-        scrub : true
+        // scrub : true
     }
 })
 
-gsap.from('.words', {
-    x : "30%",
-    opacity : "0",
-    scrollTrigger : {
-        trigger : '.tubuh',
-        start : 'top bottom',
-        end : 'top 70%',
-        scrub : true
-    }
-})
-gsap.from('.tubuh img', {
-    x : "-30%",
-    opacity : "0",
-    scrollTrigger : {
-        trigger : '.tubuh',
-        start : 'top bottom',
-        end : 'top 70%',
-        scrub : true
-    }
-})
-if(window.innerWidth >= 670){
+if(window.innerWidth > 670){
     gsap.to('.nav-links', {
     background : 'black',
     color : 'white',
@@ -108,7 +89,7 @@ if (window.innerWidth <= 670){
                 toggleClass : 'active',
                 start : '-40% bottom',
                 end : '-40% 60%',
-                scrub : true
+                // scrub : true
             }
         })
     })
@@ -123,11 +104,16 @@ if (window.innerWidth <= 670){
             toggleClass : 'active',
             start : '-40% bottom',
             end : '-40% 70%',
-            scrub : true
+            // scrub : true
+            // toggleActions : 'play none reverse none'
         }
     })
 })
 }
+
+window.addEventListener('scroll', () => {
+    navTitle.classList.toggle('sticky', window.scrollY > 0)
+})
 
 let lastScrollTop = 0;
 

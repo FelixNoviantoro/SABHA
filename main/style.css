@@ -1,3 +1,10 @@
+:root {
+    --background-theme-1 : #e5cdb0;
+    --background-theme-2 : #f3d6c2;
+    --background-theme-3 : #fbf1ea;
+    --background-theme-4 : #f08080;
+}
+
 @font-face {
     font-family: "Lato-light";
     src: url('./fonts/Lato-Light.ttf');
@@ -66,7 +73,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: var(--background-theme-1);
     position: relative;
     z-index: 6;
 } 
@@ -112,7 +119,8 @@ nav {
     width: 20px;
 }
 .nav-links {
-    background-color: white;
+    /* background-color: var(--background-theme-1); */
+    background: white;
     transition: .3s;
     position: relative;
     z-index: 5;
@@ -289,7 +297,7 @@ main .tombol {
     justify-content: center;
     align-items: center;
     transition: .3s;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     margin-top: 30px;
 }
 .tombol a {
@@ -303,7 +311,7 @@ main .tombol:hover {
 
 /* footer====================================== */
 header {
-    height: 200px;
+    height: 300px;
     width: 100%;
     background: white;
     display: flex;
@@ -320,6 +328,7 @@ header {
 }
 .header-main h1 {
     font-family: 'Playfair Display', serif;
+    font-size: 3rem;
 }
 .header-logo {
     width: 50%;
@@ -329,8 +338,9 @@ header {
     padding: 10px;
 }
 .header-logo img {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
+    margin-right: 2rem;
 }
 /* header===================================== */
 footer {
@@ -522,12 +532,26 @@ footer .content {
     main .content {
         top: 0;
     }
+    main .content h1 {
+        font-size: 3vw
+    }
+    main .content h3 {
+        font-size: 2.5vw;
+    }
     main .tombol {
         height: 5vw;
-        width: 10vw;
+        width: 15vw;
     }
     .tombol a {
         font-size: 2vw;
+    }
+    .header-main h1{
+        font-size: 2rem;
+    }
+    .header-logo img {
+        margin-right: .5rem;
+        height: 30px;
+        width: 30px;
     }
     footer {
         height: 90vh;
@@ -575,15 +599,9 @@ footer .content {
     .overlay {
         display: none;
     }
-    main .content h1 {
-        font-size: 4vw
-    }
-    main .content h3 {
-        font-size: 4vw;
-    }
     main .content .tombol {
         height: 10vw;
-        width: 20vw;
+        width: 25vw;
     }
     .tombol a {
         font-size: 4vw;
